@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     public Text DialogueText;
     private Queue<string> sentences;
     private float timer;
+    public GameObject dragon;
+    public GameObject plant;
 
     void Start()
     {
@@ -33,6 +35,12 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
             return;
+        }
+        if (sentences.Count == 2)
+        {
+            dragon.GetComponent<Movement>().state = Movement.State.Move;
+            StartCoroutine(dragon.GetComponent<Movement>().MoveCoroutine());
+            StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine());
         }
         string sentence = sentences.Dequeue();
         DialogueText.text = sentence;
