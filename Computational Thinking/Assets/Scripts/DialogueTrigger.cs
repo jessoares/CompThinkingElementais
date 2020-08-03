@@ -6,10 +6,13 @@ using UnityEngine.UI;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public CanvasEffects fade;
+    public DialogueManager manager;
 
-    public void TriggerDialogue()
+    public void Start()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        manager.sentences = new Queue<string>();
+        manager.StartDialogue(dialogue);
     }
         
 

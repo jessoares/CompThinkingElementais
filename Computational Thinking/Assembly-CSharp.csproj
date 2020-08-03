@@ -60,12 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CanvasEffects.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\Tarefa01.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/jesso/Desktop/Computational Thinking/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

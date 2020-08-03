@@ -7,26 +7,17 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text DialogueText;
-    private Queue<string> sentences;
+    public Queue<string> sentences;
     private float timer;
-    public GameObject dragon;
-    public GameObject plant;
+   
 
-    void Start()
-    {
-        sentences = new Queue<string>();
-    }
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Start conver " + dialogue.name);
-
         sentences.Clear();
-
         foreach(string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-
         DisplayNextSentence();
     }
     public void DisplayNextSentence()
@@ -36,12 +27,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        if (sentences.Count == 2)
-        {
-            dragon.GetComponent<Movement>().state = Movement.State.Move;
-            StartCoroutine(dragon.GetComponent<Movement>().MoveCoroutine());
-            StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine());
-        }
+       
         string sentence = sentences.Dequeue();
         DialogueText.text = sentence;
     }
@@ -49,4 +35,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of conver");
     }
+   
+
+
+
 }

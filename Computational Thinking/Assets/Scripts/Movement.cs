@@ -24,8 +24,8 @@ public class Movement : MonoBehaviour
     void Start()
     {
         Speed = 1.5f;
-        Width = 1.3f;
-        Height = 1.3f;
+        Width = 1.1f;
+        Height = 1.1f;
         x = this.transform.position.x;
         y = this.transform.position.y;
         z = this.transform.position.z;
@@ -46,11 +46,21 @@ public class Movement : MonoBehaviour
         }
     }
 
+    void Moving()
+    {
+        state = State.Move;
+    }
+
+    void Still()
+    {
+        state = State.Idle;
+    }
+
     void Circle()
     {
         timeCounter += Time.deltaTime * Speed;
         x = Mathf.Cos(timeCounter) * Width;
-        y = -0.4f;
+        y = -0.3f;
         z = Mathf.Sin(timeCounter) * Height;
         transform.position = new Vector3(x, y, z) + center.position;
     }
