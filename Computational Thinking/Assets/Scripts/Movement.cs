@@ -8,17 +8,20 @@ public class Movement : MonoBehaviour
     private float Speed;
     private float Width;
     private float Height;
-    private float timeCounter;
+    public float timeCounter;
     public float x;
     public float y;
     public float z;
     public Transform center;
-    public ParticleSystem fire;
-    public Transform particlePosition;
+    public Transform attackPoint;
+    public float paraboleCounter;
+  
     public enum State
     {
         Idle,
-        Move
+        Move,
+        Attack,
+        Death
     }
     public State state;
     void Start()
@@ -43,6 +46,13 @@ public class Movement : MonoBehaviour
                 break;
             case State.Idle:
                 break;
+            case State.Attack:
+                Attack();
+                break;
+            case State.Death:
+                Death();
+                break;
+
         }
     }
 
@@ -65,12 +75,25 @@ public class Movement : MonoBehaviour
         transform.position = new Vector3(x, y, z) + center.position;
     }
 
-
-   public IEnumerator MoveCoroutine()
+    void Attack()
     {
-        yield return new WaitForSeconds(2.7F);
-        Instantiate(fire,particlePosition.position,Quaternion.identity);
-        state = State.Idle;
+        float slideSpeed = 1f;
+        transform.position += (attackPoint.position - this.transform.position) * slideSpeed * Time.deltaTime;
+        if (Vector3.Distance(transform.position,attackPoint.position) < 0.7f)
+        {
+            state = State.Idle;
+        }
     }
+
+    void Death()
+    {
+        paraboleCounter += Time.deltaTime;
+        paraboleCounter = paraboleCounter % 5f;
+        transform.position = MathParabola.Parabola(Vector3.zero, Vector3.forward * 10f, 5f, paraboleCounter / 5f);
+
+
+
+    }
+ 
 
 }

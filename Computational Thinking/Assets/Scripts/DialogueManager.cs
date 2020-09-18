@@ -9,7 +9,11 @@ public class DialogueManager : MonoBehaviour
     public Text DialogueText;
     public Queue<string> sentences;
     private float timer;
-   
+    public bool primeiroCorreto;
+    public Tarefa01 tarefa01;
+    public string sentence;
+    float nextSentenceTime;
+    public float sentenceRate;
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -21,22 +25,23 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
     public void DisplayNextSentence()
-    {
-        if (sentences.Count == 0)
+    {  
+        if (Time.time >= nextSentenceTime)
         {
-            EndDialogue();
-            return;
+            sentence = sentences.Dequeue();
+            DialogueText.text = sentence;
+            nextSentenceTime = Time.time + 1f / sentenceRate;
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }         
         }
-       
-        string sentence = sentences.Dequeue();
-        DialogueText.text = sentence;
     }
    void EndDialogue()
     {
         Debug.Log("End of conver");
     }
    
-
-
 
 }

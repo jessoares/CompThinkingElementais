@@ -6,6 +6,7 @@ public class Damage : MonoBehaviour
 {
     public Color flashColor;
     public Color regularColor;
+    public Color normalColor;
     public float flashDuration;
     public int numberOffFlashes;
     public SpriteRenderer mySprite;
@@ -21,10 +22,11 @@ public class Damage : MonoBehaviour
             temp++;
         }
         this.gameObject.SetActive(false);
+        mySprite.color = normalColor;
     }
-    public IEnumerator DeathCoroutine()
+    public IEnumerator DeathCoroutine(float timer)
     {
-        yield return new WaitForSeconds(2.7f);
+        yield return new WaitForSeconds(timer);
         StartCoroutine(FlashCoroutine());
     }
 }

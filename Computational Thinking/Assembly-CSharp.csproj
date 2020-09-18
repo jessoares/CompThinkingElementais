@@ -61,13 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CanvasEffects.cs" />
+    <Compile Include="Assets\Scripts\Attack.cs" />
     <Compile Include="Assets\Scripts\Damage.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\DialogueManager2.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
+    <Compile Include="Assets\Scripts\MathParabola.cs" />
+    <Compile Include="Assets\Scripts\MoveSystem.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\ParabolaController.cs" />
     <Compile Include="Assets\Scripts\Tarefa01.cs" />
+    <Compile Include="Assets\Scripts\Tarefa02.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/jesso/Desktop/Computational Thinking/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
