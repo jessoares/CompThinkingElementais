@@ -197,6 +197,7 @@ public class Tarefa02 : MonoBehaviour
     {
         if (rightAnswer != 2)
         {
+            sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
             manager.GetComponent<DialogueManager>().DialogueText.text = "Hm, acho que você errou por pouco, vamos tentar de novo?";
             StartCoroutine(Wait2Dialogue());
 
@@ -211,6 +212,7 @@ public class Tarefa02 : MonoBehaviour
     {
         if (rightAnswer != 3)
         {
+            sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
             manager.GetComponent<DialogueManager>().DialogueText.text = "Hm, acho que você errou por pouco, vamos tentar de novo?";
             StartCoroutine(Wait2Dialogue());
 

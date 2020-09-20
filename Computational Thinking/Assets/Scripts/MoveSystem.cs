@@ -15,11 +15,13 @@ public class MoveSystem : MonoBehaviour
     public int corretos;
     public bool finish;
 
+
+
     private Vector3 resetPosition;
 
     void Start()
     {
-        resetPosition = this.transform.localPosition;
+        resetPosition = this.transform.position;
         corretos = 0;
     }
 

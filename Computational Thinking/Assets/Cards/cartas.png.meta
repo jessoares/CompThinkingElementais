@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 3dad1df5b7230254aa4c144be79c537f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7035640827511919432
+    second: cartas_0
+  - first:
+      213: -6615675202023742229
+    second: cartas_1
+  - first:
+      213: -1209903221105704126
+    second: cartas_2
+  - first:
+      213: -6287384416022553831
+    second: cartas_3
+  - first:
+      213: -3005858147526513425
+    second: cartas_4
+  - first:
+      213: -1408848047273551750
+    second: cartas_5
+  - first:
+      213: 3194708712154094856
+    second: cartas_6
+  - first:
+      213: 4905652091873996249
+    second: cartas_7
+  - first:
+      213: -6697677457162315298
+    second: cartas_8
+  - first:
+      213: -8041155629014292078
+    second: cartas_9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cartas_0
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 209
+        width: 90
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f1c746435bc0e4880a7136cab5b553
+      internalID: 7035640827511919432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_1
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 211
+        width: 80
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5187092, y: 0.5249454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908b9f54638126141bd3fa9e5c5b4ae8
+      internalID: -6615675202023742229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_2
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 208
+        width: 86
+        height: 112
+      alignment: 9
+      pivot: {x: 0.49198702, y: 0.5041022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f872bdedfc79346912a112d0e5f148
+      internalID: -1209903221105704126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_3
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 102
+        width: 84
+        height: 106
+      alignment: 9
+      pivot: {x: 0.50601995, y: 0.51669616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c271dcb3576935d4fa831b075424fcfb
+      internalID: -6287384416022553831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 100
+        width: 85
+        height: 109
+      alignment: 9
+      pivot: {x: 0.48273245, y: 0.5403966}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e9c8e0816978b4c9e313c5da3137c2
+      internalID: -3005858147526513425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 101
+        width: 84
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f119175186bc3434b8fe7018ba41f858
+      internalID: -1408848047273551750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_6
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 206
+        width: 94
+        height: 113
+      alignment: 9
+      pivot: {x: 0.5366936, y: 0.49389514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a43977c1e6cc949a1877f75c9fb7d7
+      internalID: 3194708712154094856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_7
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 344
+        width: 49
+        height: 55
+      alignment: 9
+      pivot: {x: 0.510597, y: 0.3749051}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc16712baf16d342a579fdb90cc01b9
+      internalID: 4905652091873996249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 337
+        width: 86
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4890ed90b361b14b9f75e6c7c3633bd
+      internalID: -6697677457162315298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 338
+        width: 56
+        height: 61
+      alignment: 9
+      pivot: {x: 0.51132584, y: 0.37003115}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8f01e6a1803ff41a5b70baa9d48c20
+      internalID: -8041155629014292078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2333e8c965a49614bbfaa7ca7ce01661
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
