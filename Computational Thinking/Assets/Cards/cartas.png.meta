@@ -32,6 +32,15 @@ TextureImporter:
   - first:
       213: -8041155629014292078
     second: cartas_9
+  - first:
+      213: -2485096872071357665
+    second: cartas_10
+  - first:
+      213: -1401618653965949633
+    second: cartas_11
+  - first:
+      213: -3009025055389302132
+    second: cartas_12
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -131,12 +140,12 @@ TextureImporter:
       name: cartas_0
       rect:
         serializedVersion: 2
-        x: 252
-        y: 209
-        width: 90
-        height: 100
+        x: 263
+        y: 211
+        width: 72
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,12 +161,12 @@ TextureImporter:
       name: cartas_1
       rect:
         serializedVersion: 2
-        x: 345
-        y: 211
-        width: 80
-        height: 100
-      alignment: 9
-      pivot: {x: 0.5187092, y: 0.5249454}
+        x: 349
+        y: 213
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +182,12 @@ TextureImporter:
       name: cartas_2
       rect:
         serializedVersion: 2
-        x: 436
-        y: 208
-        width: 86
-        height: 112
-      alignment: 9
-      pivot: {x: 0.49198702, y: 0.5041022}
+        x: 441
+        y: 214
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +203,12 @@ TextureImporter:
       name: cartas_3
       rect:
         serializedVersion: 2
-        x: 173
-        y: 102
-        width: 84
-        height: 106
-      alignment: 9
-      pivot: {x: 0.50601995, y: 0.51669616}
+        x: 179
+        y: 106
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +224,12 @@ TextureImporter:
       name: cartas_4
       rect:
         serializedVersion: 2
-        x: 259
-        y: 100
-        width: 85
-        height: 109
-      alignment: 9
-      pivot: {x: 0.48273245, y: 0.5403966}
+        x: 263
+        y: 107
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +245,12 @@ TextureImporter:
       name: cartas_5
       rect:
         serializedVersion: 2
-        x: 350
-        y: 101
-        width: 84
-        height: 109
+        x: 355
+        y: 106
+        width: 72
+        height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +266,12 @@ TextureImporter:
       name: cartas_6
       rect:
         serializedVersion: 2
-        x: 67
-        y: 206
-        width: 94
-        height: 113
-      alignment: 9
-      pivot: {x: 0.5366936, y: 0.49389514}
+        x: 79
+        y: 212
+        width: 75
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,7 +313,7 @@ TextureImporter:
         width: 86
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -333,6 +342,69 @@ TextureImporter:
       bones: []
       spriteID: 5f8f01e6a1803ff41a5b70baa9d48c20
       internalID: -8041155629014292078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 273
+        width: 47
+        height: 42
+      alignment: 9
+      pivot: {x: 0.6653261, y: 0.30607605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e399edb27f63a944cb99fe64a1129d28
+      internalID: -2485096872071357665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 232
+        width: 48
+        height: 39
+      alignment: 9
+      pivot: {x: 0.55031765, y: 0.33026865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbba49b933d1988499e3d707cd6942e7
+      internalID: -1401618653965949633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cartas_12
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 163
+        width: 39
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5270637, y: 0.45607528}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3315bf0ffcbcdd4083468452e58c28d
+      internalID: -3009025055389302132
       vertices: []
       indices: 
       edges: []

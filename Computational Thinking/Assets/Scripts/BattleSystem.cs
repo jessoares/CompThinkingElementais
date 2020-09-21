@@ -25,6 +25,7 @@ public class BattleSystem : MonoBehaviour
     public int index;
 
     public Card[] enemyCards;
+    public GameObject[] playerCards;
     public RectTransform enemyBattleStation;
     public GameObject enemyPrefab;
     public GameObject enemyGO;
@@ -32,7 +33,10 @@ public class BattleSystem : MonoBehaviour
 
 
     public bool battleOver;
+    public bool battleWon;
 
+
+    public Transform attackPoint;
     
 
 
@@ -46,6 +50,7 @@ public class BattleSystem : MonoBehaviour
         enemyGO = Instantiate(enemyPrefab, enemyBattleStation.position, Quaternion.identity, cardCanvas.transform);
         enemyGO.GetComponent<RectTransform>().anchoredPosition = enemyBattleStation.GetComponent<RectTransform>().anchoredPosition;
         enemyHUD = enemyGO.GetComponent<CardDisplay>();
+        enemyUnit.currentHP = enemyUnit.maxHP;
     }
     public void StartBattle()
     { 
@@ -64,9 +69,7 @@ public class BattleSystem : MonoBehaviour
         {
             playerUnit = playerGO.GetComponent<CardDisplay>().card;
             playerHUD = playerGO.GetComponent<CardDisplay>();
-            Debug.Log("BATALHA COME~ÇA");
-            yield return new WaitForSeconds(2f);
-            Debug.Log("BATALHA COMEcou");
+            yield return new WaitForSeconds(1f);
             StartCoroutine(PlayerAttack());
         }
 	}
@@ -74,12 +77,9 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator PlayerAttack()
 	{
 	    bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-        Instantiate(playerUnit.attack,playerGO.GetComponent<CardDisplay>().attackPoint.position,Quaternion.identity);
+        Instantiate(playerUnit.attack,attackPoint.position,Quaternion.identity);
         enemyHUD.SetHP(enemyUnit.currentHP);
-       
-        //dialogueText.text = "The attack is successful!";
-
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
 		if(isDead)
 		{
@@ -87,8 +87,12 @@ public class BattleSystem : MonoBehaviour
             if(index < 0)
             {
                 battleOver = true;
+                battleWon = true;
             }
-            enemyGO.GetComponent<Damage>().StartCoroutine(enemyGO.GetComponent<Damage>().DeathCoroutine(2.7f));
+            Debug.Log("inimigo morreu");
+            enemyGO.GetComponent<CardDamage>().StartCoroutine(enemyGO.GetComponent<CardDamage>().DeathCoroutine(1.5f));
+            enemyHUD.SetHP(0);
+            yield return new WaitForSeconds(5f);
             enemyUnit = enemyCards[index];
             enemyPrefab.GetComponent<CardDisplay>().card = enemyUnit;
             enemyGO = Instantiate(enemyPrefab, enemyBattleStation.position, Quaternion.identity, cardCanvas.transform);
@@ -97,7 +101,9 @@ public class BattleSystem : MonoBehaviour
             EndBattle();
 		} else
 		{
-			state = BattleState.ENEMYTURN;
+            enemyGO.GetComponent<CardDamage>().StartCoroutine(enemyGO.GetComponent<CardDamage>().DamageCoroutine(0f,5,0.5f));
+            yield return new WaitForSeconds(3f);
+            state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
            
         }
@@ -111,16 +117,27 @@ public class BattleSystem : MonoBehaviour
 
         bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-        playerHUD.SetHP(playerUnit.currentHP);
+        Instantiate(enemyUnit.attack, attackPoint.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(1f);
+        playerHUD.SetHP(playerUnit.currentHP);      
 
         if (isDead)
         {
-            playerGO.GetComponent<Damage>().StartCoroutine(enemyGO.GetComponent<Damage>().DeathCoroutine(2.7f));
+            playerGO.GetComponent<CardDamage>().StartCoroutine(playerGO.GetComponent<CardDamage>().DeathCoroutine(1.5f));
+            playerHUD.SetHP(0);
+            if (GameObject.FindGameObjectsWithTag("Card").Length == 0)
             {
-                EndBattle();
+                battleOver = true;
+                battleWon = false;
+
             }
+            EndBattle();
+        }
+        else
+        {
+            playerGO.GetComponent<CardDamage>().StartCoroutine(playerGO.GetComponent<CardDamage>().DamageCoroutine(0f, 5, 0.5f));
+            yield return new WaitForSeconds(3f);
+            EndBattle();
         }
     }
 

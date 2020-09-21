@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 229306852564239473}
   - component: {fileID: 9182432823125711910}
   - component: {fileID: 8239812332087289758}
+  - component: {fileID: 134999342349578281}
   m_Layer: 5
   m_Name: OpponenteCarta
   m_TagString: Untagged
@@ -27,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 3155032848269214472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 3566451178679864085}
   - {fileID: 5971521670800447429}
@@ -68,13 +69,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e362b628741049b058589185e42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 652aa38b1299b484db63ab0e38f9d637, type: 2}
+  card: {fileID: 11400000, guid: 96e2c1e23f574a449b8d346f2c37b090, type: 2}
   image: {fileID: 8087476853817861224}
-  name: {fileID: 595061883620269779}
+  novoName: {fileID: 595061883620269779}
   damage: {fileID: 2864238657501526321}
   attackName: {fileID: 3941961132453169455}
   currentHealth: {fileID: 7220748987357984623}
   attack: {fileID: 0}
+--- !u!114 &134999342349578281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155032848269214472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215430e3e1161c44fafc53fbe642d5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashColor: {r: 1, g: 1, b: 1, a: 0.7529412}
+  regularColor: {r: 1, g: 0.54293656, b: 0.3915094, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.2
+  numberOffFlashes: 7
+  mySprite: {fileID: 8087476853817861224}
 --- !u!1 &3635958052563506612
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3739383278941746179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -138.4, z: 0}
+  m_LocalPosition: {x: 0, y: -80, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 229306852564239473}
@@ -220,7 +239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 35.099976}
+  m_AnchoredPosition: {x: 0, y: 36}
   m_SizeDelta: {x: 34.68, y: 8.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1878733215959891049
@@ -301,7 +320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.3, y: 35.1}
+  m_AnchoredPosition: {x: -22, y: 36}
   m_SizeDelta: {x: 34.68, y: 8.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5288273821930749602
@@ -380,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000061989, y: 44.1}
+  m_AnchoredPosition: {x: 0, y: 45}
   m_SizeDelta: {x: 34.68, y: 8.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3522253872027246373

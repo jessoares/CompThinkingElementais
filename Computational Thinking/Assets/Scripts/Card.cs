@@ -25,6 +25,7 @@ public class Card : ScriptableObject
 
         if (currentHP <= 0)
         {
+            currentHP = maxHP;
             return true;
         }
         else

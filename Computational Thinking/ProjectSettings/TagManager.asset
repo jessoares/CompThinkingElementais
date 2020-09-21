@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Card
   layers:
   - Default
   - TransparentFX
@@ -41,9 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Attack
-    uniqueID: 3850266617
-    locked: 0
   - name: Player
     uniqueID: 2212681539
+    locked: 0
+  - name: Attack
+    uniqueID: 3850266617
     locked: 0

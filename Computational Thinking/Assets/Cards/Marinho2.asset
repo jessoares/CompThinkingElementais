@@ -18,3 +18,4 @@ MonoBehaviour:
   attackName: Jato de Agua
   currentHP: 9
   maxHP: 9
+  attack: {fileID: 5401300028938575641, guid: 2714e3135cbe24d4383995291a85c436, type: 3}

@@ -7,16 +7,15 @@ public class CardDisplay : MonoBehaviour
 {
     public Card card;
     public Image image;
-    public Text name;
+    public Text novoName;
     public Text damage;
     public Text attackName;
     public Text currentHealth;
     public ParticleSystem attack;
-    public Transform attackPoint;
     void Start()
     {
         image.sprite = card.image;
-        name.text = card.name;
+        novoName.text = card.unitName;
         damage.text = card.damage.ToString();
         attackName.text = card.attackName.ToString();
         currentHealth.text = card.currentHP.ToString();
@@ -26,7 +25,7 @@ public class CardDisplay : MonoBehaviour
     {
         currentHealth.text = hp.ToString();
     }
-
+    
 
 
 }

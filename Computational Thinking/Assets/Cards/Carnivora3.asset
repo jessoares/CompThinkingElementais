@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93159ad9850f19b43a92953f639c73d7, type: 3}
   m_Name: Carnivora3
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: -6287384416022553831, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
   unitName: Carnivora
   damage: 3
   attackName: Mordida Venenosa
   currentHP: 3
   maxHP: 3
+  attack: {fileID: 2233389633882480058, guid: 311b9e1b327231d4a9a85715d20d2365, type: 3}
