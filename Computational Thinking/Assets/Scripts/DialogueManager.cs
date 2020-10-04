@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     public bool primeiroCorreto;
     public Tarefa01 tarefa01;
     public string sentence;
-    float nextSentenceTime;
+    public float nextSentenceTime = 0f;
     public float sentenceRate;
 
     public void StartDialogue(Dialogue dialogue)

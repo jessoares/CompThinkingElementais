@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5111126239116036672}
   - component: {fileID: 5401300028938575641}
   - component: {fileID: 9101394608834020211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WaterParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ ParticleSystem:
   m_GameObject: {fileID: 4521488304580107218}
   serializedVersion: 6
   lengthInSec: 1
-  simulationSpeed: 10
+  simulationSpeed: 7
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2

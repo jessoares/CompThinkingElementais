@@ -14,6 +14,12 @@ public class Card : ScriptableObject
     public ParticleSystem attack;
 
 
+    public void Start()
+    {
+        currentHP = maxHP;
+    }
+
+
     public void setHP()
     {
         currentHP = maxHP;

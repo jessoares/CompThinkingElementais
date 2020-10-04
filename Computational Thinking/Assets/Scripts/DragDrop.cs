@@ -8,6 +8,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    public GameObject battleSystem;
 
     private void Awake()
     {
@@ -17,9 +18,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
+        if (eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace == true)
+        {
+            battleSystem.GetComponent<BattleSystem>().playerGO = null;
+            eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace = false;
+        }
     }
     public void OnEndDrag(PointerEventData eventData)
     {
+    
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }

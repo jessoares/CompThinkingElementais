@@ -12,6 +12,7 @@ public class CardDisplay : MonoBehaviour
     public Text attackName;
     public Text currentHealth;
     public ParticleSystem attack;
+    public bool inPlace;
     void Start()
     {
         image.sprite = card.image;
