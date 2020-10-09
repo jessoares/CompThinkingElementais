@@ -35,6 +35,9 @@ public class Tarefa01 : MonoBehaviour
     public Text secondButtonText;
     public Transform opponent1;
     public Transform opponent2;
+    public Transform dragonPointer;
+    public Transform horsePointer;
+    public Transform plantPointer;
     public float nextSentenceTime;
     public float sentenceRate;
     public int rightAnswer;
@@ -48,7 +51,7 @@ public class Tarefa01 : MonoBehaviour
     {
         nextSentenceTime = Time.time + 1f / sentenceRate;
         isQuestion = false;
-        count = 30;
+        count = 38;
     }
 
     public void Update()
@@ -60,9 +63,6 @@ public class Tarefa01 : MonoBehaviour
     }
     public void NextSceneScript()
     {
-       
-        if (Time.time >= nextSentenceTime)
-        {
             nextSentenceTime = Time.time + 1f / sentenceRate;
             nextButton.SetActive(false);
             count--;
@@ -74,48 +74,51 @@ public class Tarefa01 : MonoBehaviour
                 firstButton.SetActive(false);
                 secondButton.SetActive(false);
             }
-            if (count == 1)
+            if (count == 3)
             {
-              
-                horse.GetComponent<Damage>().StartCoroutine(horse.GetComponent<Damage>().DeathCoroutine(2.7f));
-                StartCoroutine(AttackCoroutine(plant, opponent2.transform));
-            }
-            if (count == 2)
+
+            horse.GetComponent<Damage>().StartCoroutine(horse.GetComponent<Damage>().DeathCoroutine(3.5f));
+            StartCoroutine(AttackCoroutine(plant, opponent2.transform, plantParticle, horse.transform,3f));
+      
+        }
+            if (count == 4)
             {
+                rightAnswer = 1;
                 firstButtonText.text = "Cárnivora";
                 secondButtonText.text = "Marinho";
                 dragon.SetActive(false);
                 plant.SetActive(true);
                 plant.transform.position = opponent1.transform.position;
-                horse.GetComponent<Damage>().StartCoroutine(horse.GetComponent<Damage>().DeathCoroutine(2.7f));
-                StartCoroutine(AttackCoroutine(plant, opponent2.transform));
+               
             }
-            if (count == 3)
+            if (count == 5)
             {
               
-                dragon.GetComponent<Damage>().StartCoroutine(dragon.GetComponent<Damage>().DeathCoroutine(2.7f));
-                StartCoroutine(AttackCoroutine(horse, opponent1.transform));
+                dragon.GetComponent<Damage>().StartCoroutine(dragon.GetComponent<Damage>().DeathCoroutine(3.5f));
+                StartCoroutine(AttackCoroutine(horse, opponent1.transform,waterParticle,dragon.transform,3f));
+          
 
-            }
-            if (count == 4)
+        }
+            if (count == 6)
             {
+                rightAnswer = 2;
                 firstButtonText.text = "Tocha";
                 secondButtonText.text = "Marinho";
                 horse.SetActive(true);
                 horse.transform.position = opponent2.transform.position;
                 plant.SetActive(false);
-                dragon.GetComponent<Damage>().StartCoroutine(dragon.GetComponent<Damage>().DeathCoroutine(2.7f));
-                StartCoroutine(AttackCoroutine(horse, opponent1.transform));
+                
 
             }
-            if (count == 5)
+            if (count == 7)
             {
-                plant.GetComponent<Damage>().StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine(2.7f));
-                StartCoroutine(AttackCoroutine(dragon, opponent2.transform));
+                plant.GetComponent<Damage>().StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine(3.5f));
+                StartCoroutine(AttackCoroutine(dragon, opponent2.transform,fireParticle,plant.transform,3f));
 
-            }
-            if (count == 5)
+        }
+            if (count == 8)
             {
+                rightAnswer = 1;
                 firstButtonText.text = "Tocha";
                 horse.SetActive(false);
                 dragon.SetActive(true);
@@ -124,14 +127,16 @@ public class Tarefa01 : MonoBehaviour
                
 
             }
-            if (count == 6)
+            if (count == 9)
             {
-                horse.GetComponent<Damage>().StartCoroutine(horse.GetComponent<Damage>().DeathCoroutine(2.7f));
-                StartCoroutine(AttackCoroutine(plant, opponent2.transform));
+                horse.GetComponent<Damage>().StartCoroutine(horse.GetComponent<Damage>().DeathCoroutine(3.5f));
+                StartCoroutine(AttackCoroutine(plant, opponent1.transform,plantParticle,horse.transform,3f));
+            
 
-            }
-            if (count == 7)
+        }
+            if (count == 10)
             {
+                rightAnswer = 2;
                 isQuestion = true;
                 nextButton.SetActive(false);
                 firstButton.SetActive(true);
@@ -141,10 +146,52 @@ public class Tarefa01 : MonoBehaviour
                 plant.transform.position = opponent2.transform.position;
                 firstButtonText.text = "Marinho";
                 secondButtonText.text = "Cárnivora";
-                
+                sentenceRate = 0.05f;
 
-            }
-            if (count == 8)
+
+        }
+            if (count == 12)
+            {
+                dragon.SetActive(true);
+                dragon.transform.position = dragonPoint.transform.position;
+                horse.transform.position = horsePoint.transform.position;
+                plant.transform.position = plantPoint.transform.position;
+                dragon.GetComponent<Movement>().timeCounter = dragonPoint.GetComponent<Movement>().timeCounter;
+                horse.GetComponent<Movement>().timeCounter = horsePoint.GetComponent<Movement>().timeCounter;
+                plant.GetComponent<Movement>().timeCounter = plantPoint.GetComponent<Movement>().timeCounter;
+           
+
+        }
+            if (count == 13)
+            {
+                isQuestion = false;
+                firstButton.SetActive(false);
+                secondButton.SetActive(false);
+                nextButton.SetActive(true);
+                horse.GetComponent<Movement>().state = Movement.State.Move;
+                StartCoroutine(ElementalAttack(horse));
+            StartCoroutine(ParticleCoroutine(waterParticle, dragon.transform,1.4f));
+            plant.GetComponent<Damage>().StartCoroutine(dragon.GetComponent<Damage>().DeathCoroutine(2.7f));
+                dragonPoint.GetComponent<Movement>().state = Movement.State.Move;
+                horsePoint.GetComponent<Movement>().state = Movement.State.Move;
+                plantPoint.GetComponent<Movement>().state = Movement.State.Move;
+                StartCoroutine(PointMoveCoroutine());
+            sentenceRate = 0.7f;
+
+        }
+            if (count == 14)
+            {
+                rightAnswer = 1;
+                isQuestion = true;
+                nextButton.SetActive(false);
+                firstButton.SetActive(true);
+                secondButton.SetActive(true);
+                firstButtonText.text = "Água";
+                secondButtonText.text = "Plantas";
+            sentenceRate = 0.2f;
+
+        }
+            if (count == 15)
             {
                 plant.SetActive(true);
                 dragon.transform.position = dragonPoint.transform.position;
@@ -153,36 +200,39 @@ public class Tarefa01 : MonoBehaviour
                 dragon.GetComponent<Movement>().timeCounter = dragonPoint.GetComponent<Movement>().timeCounter;
                 horse.GetComponent<Movement>().timeCounter = horsePoint.GetComponent<Movement>().timeCounter;
                 plant.GetComponent<Movement>().timeCounter = plantPoint.GetComponent<Movement>().timeCounter;
-                dragon.GetComponent<SpriteRenderer>().sprite = dragonSprite;
-                horse.GetComponent<SpriteRenderer>().sprite = horseSprite;
-                plant.GetComponent<SpriteRenderer>().sprite = plantSprite;
-            }
-            if (count == 9)
+            
+        }
+            if (count == 16)
             {
                 isQuestion = false;
                 firstButton.SetActive(false);
                 secondButton.SetActive(false);
-                nextButton.SetActive(true);
                 dragon.GetComponent<Movement>().state = Movement.State.Move;
                 StartCoroutine(ElementalAttack(dragon));
-                plant.GetComponent<Damage>().StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine(2.7f));
+            StartCoroutine(ParticleCoroutine(fireParticle, plant.transform,1.4f));
+            horse.GetComponent<Damage>().StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine(2.7f));
                 dragonPoint.GetComponent<Movement>().state = Movement.State.Move;
                 horsePoint.GetComponent<Movement>().state = Movement.State.Move;
                 plantPoint.GetComponent<Movement>().state = Movement.State.Move;
                 StartCoroutine(PointMoveCoroutine());
-            }
-            if (count == 13)
+                nextButton.SetActive(true);
+            sentenceRate = 0.7f;
+
+        }
+                    
+            if (count == 17)
             {
                 rightAnswer = 2;
                 isQuestion = true;
                 nextButton.SetActive(false);
                 firstButton.SetActive(true);
                 secondButton.SetActive(true);
-                firstButtonText.text = "Fogo";
-                secondButtonText.text = "Planta";
+                firstButtonText.text = "Água";
+                secondButtonText.text = "Fogo";
+            sentenceRate = 0.2f;
 
-            }
-            if (count == 11)
+        }
+            if (count == 18)
             {
                 horse.SetActive(true);
                 dragon.transform.position = dragonPoint.transform.position;
@@ -191,76 +241,70 @@ public class Tarefa01 : MonoBehaviour
                 dragon.GetComponent<Movement>().timeCounter = dragonPoint.GetComponent<Movement>().timeCounter;
                 horse.GetComponent<Movement>().timeCounter = horsePoint.GetComponent<Movement>().timeCounter;
                 plant.GetComponent<Movement>().timeCounter = plantPoint.GetComponent<Movement>().timeCounter;
-            }
-            if (count == 12)
+          
+        }
+            if (count == 19)
             {
                 isQuestion = false;
+                nextButton.SetActive(true);
                 firstButton.SetActive(false);
                 secondButton.SetActive(false);
                 plant.GetComponent<Movement>().state = Movement.State.Move;
                 StartCoroutine(ElementalAttack(plant));
+                StartCoroutine(ParticleCoroutine(plantParticle,horse.transform,1.4f));
                 horse.GetComponent<Damage>().StartCoroutine(horse.GetComponent<Damage>().DeathCoroutine(2.7f));
                 dragonPoint.GetComponent<Movement>().state = Movement.State.Move;
                 horsePoint.GetComponent<Movement>().state = Movement.State.Move;
                 plantPoint.GetComponent<Movement>().state = Movement.State.Move;
                 StartCoroutine(PointMoveCoroutine());
-                nextButton.SetActive(true);
-            }
-                    
-            if (count == 13)
-            {
-                rightAnswer = 2;
-                isQuestion = true;
-                nextButton.SetActive(false);
-                firstButton.SetActive(true);
-                secondButton.SetActive(true);
-                firstButtonText.text = "Fogo";
-                secondButtonText.text = "Água";     
-               
-            }
-            if (count == 15)
-            {
-                dragon.SetActive(true);
-                dragon.transform.position = dragonPoint.transform.position;
-                horse.transform.position = horsePoint.transform.position;
-                plant.transform.position = plantPoint.transform.position;
-                dragon.GetComponent<Movement>().timeCounter = dragonPoint.GetComponent<Movement>().timeCounter;
-                horse.GetComponent<Movement>().timeCounter = horsePoint.GetComponent<Movement>().timeCounter;
-                plant.GetComponent<Movement>().timeCounter = plantPoint.GetComponent<Movement>().timeCounter;
-            }
-            if (count == 16)
-            {
-                isQuestion = false;
-                nextButton.SetActive(true);
-                firstButton.SetActive(false);
-                secondButton.SetActive(false);
-                horse.GetComponent<Movement>().state = Movement.State.Move;
-                StartCoroutine(ElementalAttack(horse));
-                dragon.GetComponent<Damage>().StartCoroutine(dragon.GetComponent<Damage>().DeathCoroutine(2.7f));
-                dragonPoint.GetComponent<Movement>().state = Movement.State.Move;
-                horsePoint.GetComponent<Movement>().state = Movement.State.Move;
-                plantPoint.GetComponent<Movement>().state = Movement.State.Move;
-                StartCoroutine(PointMoveCoroutine());
-            }
-            if (count == 17)
+            sentenceRate = 0.7f;
+
+        }
+            if (count == 20)
             {
                 isQuestion = true;
                 nextButton.SetActive(false);
                 firstButton.SetActive(true);
                 secondButton.SetActive(true);
                 rightAnswer = 1;
-                firstButtonText.text = "Utilizar água";
-                secondButtonText.text = "Utilizar gravetos ou folhas secas";
+                firstButtonText.text = "Água";
+                secondButtonText.text = "Fogo";
+            sentenceRate = 0.2f;
 
-            }
-            if (count == 18)
+
+        }
+        if (count == 22)
+        {
+            sentenceRate = 0.7f;
+            pointer.SetActive(false);
+        }
+        if (count == 23)
             {
-                dragon.GetComponent<SpriteRenderer>().sprite = fire;
-                horse.GetComponent<SpriteRenderer>().sprite = water;
-                plant.GetComponent<SpriteRenderer>().sprite = grass;
-             
-            }
-            if (count == 19)
+                StartCoroutine(ParticleCoroutine(plantParticle, plantParticlePosition,1.4f));
+            pointer.transform.parent = plant.transform;
+            pointer.transform.position = plantPointer.position;
+
+        }
+            if (count == 24)
+            {
+                StartCoroutine(ParticleCoroutine(waterParticle, waterParticlePosition,1.4f));
+            pointer.transform.parent = horse.transform;
+            pointer.transform.position = horsePointer.position;
+        }
+            if (count == 25)
+            {
+                StartCoroutine(ParticleCoroutine(fireParticle, fireParticlePosition,1.4f));
+                pointer.SetActive(true);
+
+            pointer.transform.parent = dragon.transform;
+            pointer.transform.position = dragonPointer.position;
+
+        }
+            if(count == 26)
+        {
+            sentenceRate = 0.3f;
+        }
+            if (count == 27)
             {
                 dragon.SetActive(true);
                 dragon.transform.position = dragonPoint.transform.position;
@@ -270,20 +314,22 @@ public class Tarefa01 : MonoBehaviour
                 horse.GetComponent<Movement>().timeCounter = horsePoint.GetComponent<Movement>().timeCounter;
                 plant.GetComponent<Movement>().timeCounter = plantPoint.GetComponent<Movement>().timeCounter;
 
-            }
-            if (count == 20)
+
+        }
+            if (count == 28)
             {
                 horse.GetComponent<Movement>().state = Movement.State.Move;
-                StartCoroutine(ParticleCoroutine(waterParticle, waterParticlePosition));
+                StartCoroutine(ParticleCoroutine(waterParticle, waterParticlePosition,1.4f));
                 StartCoroutine(ElementalAttack(horse));
                 dragon.GetComponent<Damage>().StartCoroutine(dragon.GetComponent<Damage>().DeathCoroutine(2.7f));
                 dragonPoint.GetComponent<Movement>().state = Movement.State.Move;
                 horsePoint.GetComponent<Movement>().state = Movement.State.Move;
                 plantPoint.GetComponent<Movement>().state = Movement.State.Move;
                 StartCoroutine(PointMoveCoroutine());
+                sentenceRate = 0.7f;
 
-            }
-            if (count == 21)
+        }
+            if (count == 29)
             {
                 plant.SetActive(true);
                 dragon.transform.position = dragonPoint.transform.position;
@@ -292,24 +338,27 @@ public class Tarefa01 : MonoBehaviour
                 dragon.GetComponent<Movement>().timeCounter = dragonPoint.GetComponent<Movement>().timeCounter;
                 horse.GetComponent<Movement>().timeCounter = horsePoint.GetComponent<Movement>().timeCounter;
                 plant.GetComponent<Movement>().timeCounter = plantPoint.GetComponent<Movement>().timeCounter;
+                sentenceRate = 0.2f;
 
-            }
-            if (count == 22)
+        }
+            if (count == 30)
             {
                 dragon.GetComponent<Movement>().state = Movement.State.Move;
-                StartCoroutine(ParticleCoroutine(fireParticle, fireParticlePosition));
+                StartCoroutine(ParticleCoroutine(fireParticle, fireParticlePosition,1.4f));
                 StartCoroutine(ElementalAttack(dragon));
                 plant.GetComponent<Damage>().StartCoroutine(plant.GetComponent<Damage>().DeathCoroutine(2.7f));
                 dragonPoint.GetComponent<Movement>().state = Movement.State.Move;
                 horsePoint.GetComponent<Movement>().state = Movement.State.Move;
                 plantPoint.GetComponent<Movement>().state = Movement.State.Move;
                 StartCoroutine(PointMoveCoroutine());
-            }
-            if (count == 24)
+            sentenceRate = 0.7f;
+        }
+            if (count == 31)
             {
+                sentenceRate = 0.2f;
                 pointer.SetActive(false);
             }
-            if (count == 25)
+            if (count == 33)
             {
                 dragon.GetComponent<Movement>().state = Movement.State.Move;
                 plant.GetComponent<Movement>().state = Movement.State.Move;
@@ -320,7 +369,7 @@ public class Tarefa01 : MonoBehaviour
                 StartCoroutine(MoveCoroutine());
                 StartCoroutine(PointMoveCoroutine());
             }
-            if (count == 26)
+            if (count == 34)
             {
                 dragon.GetComponent<Movement>().state = Movement.State.Move;
                 plant.GetComponent<Movement>().state = Movement.State.Move;
@@ -331,23 +380,23 @@ public class Tarefa01 : MonoBehaviour
                 StartCoroutine(MoveCoroutine());
                 StartCoroutine(PointMoveCoroutine());
             }
-            if (count == 27)
+            if (count == 35)
             {
                 pointer.SetActive(true);
             }
-            if (count == 28)
+            if (count == 36)
             {
                 Canvas.Flash();
                 StartCoroutine(SummonCoroutine());
                
             }
-            if (count == 29)
+            if (count == 37)
             {
                 Canvas.Fade();
 
                
             }
-        }
+        
        
     }
     public IEnumerator SummonCoroutine()
@@ -362,11 +411,12 @@ public class Tarefa01 : MonoBehaviour
         plant.GetComponent<Movement>().state = Movement.State.Idle;
         horse.GetComponent<Movement>().state = Movement.State.Idle;
     }
-    public IEnumerator AttackCoroutine(GameObject elemental,Transform target)
+    public IEnumerator AttackCoroutine(GameObject elemental,Transform target, ParticleSystem particle, Transform position,float timer)
     {
         yield return new WaitForSeconds(2.7f);
         elemental.GetComponent<Movement>().attackPoint = target;
         elemental.GetComponent<Movement>().state = Movement.State.Attack;
+        StartCoroutine(ParticleCoroutine(particle, position,timer));
     }
     public IEnumerator PointMoveCoroutine()
     {
@@ -381,15 +431,20 @@ public class Tarefa01 : MonoBehaviour
         elemental.GetComponent<Movement>().state = Movement.State.Idle;
     }
 
-    public IEnumerator ParticleCoroutine(ParticleSystem particle, Transform particlePosition)
+
+
+
+    public IEnumerator ParticleCoroutine(ParticleSystem particle, Transform particlePosition,float time)
     {
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(time);
         Instantiate(particle, particlePosition.position, Quaternion.identity);
     }
   
     public IEnumerator Wait2Dialogue()
     {
         yield return new WaitForSeconds(3f);
+        firstButton.SetActive(true);
+        secondButton.SetActive(true);
         manager.GetComponent<DialogueManager>().DialogueText.text = sentence;
 
     }
@@ -397,12 +452,16 @@ public class Tarefa01 : MonoBehaviour
     {
         if (rightAnswer == 1)
         {
-            manager.GetComponent<DialogueManager>().DisplayNextSentence();
-            NextSceneScript();
-            nextSentenceTime = 0f;
+            manager.GetComponent<DialogueManager>().DialogueText.text = "Correto!";
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
+            StartCoroutine(WaitDialogue());
+
         }
         else
         {
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
             sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
             manager.GetComponent<DialogueManager>().DialogueText.text = "Hm, acho que você errou por pouco, vamos tentar de novo?";
             StartCoroutine(Wait2Dialogue());
@@ -412,6 +471,8 @@ public class Tarefa01 : MonoBehaviour
     {
         if (rightAnswer != 2)
         {
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
             sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
             manager.GetComponent<DialogueManager>().DialogueText.text = "Hm, acho que você errou por pouco, vamos tentar de novo?";
             StartCoroutine(Wait2Dialogue());
@@ -419,26 +480,25 @@ public class Tarefa01 : MonoBehaviour
         }
         else
         {
-            manager.GetComponent<DialogueManager>().DisplayNextSentence();
-            NextSceneScript();
-            nextSentenceTime = 0f;
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
+            manager.GetComponent<DialogueManager>().DialogueText.text = "Correto!";
+            StartCoroutine(WaitDialogue());
+    
         }
     }
-    public void buttonThree()
+    public IEnumerator WaitDialogue()
     {
-        if (rightAnswer != 3)
-        {
-            sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
-            manager.GetComponent<DialogueManager>().DialogueText.text = "Hm, acho que você errou por pouco, vamos tentar de novo?";
-            StartCoroutine(Wait2Dialogue());
-
-        }
-        else
-        {
-            manager.GetComponent<DialogueManager>().DisplayNextSentence();
-            NextSceneScript();
-            nextSentenceTime = 0f;
-        }
+        yield return new WaitForSeconds(3f);
+        firstButton.SetActive(true);
+        secondButton.SetActive(true);
+        manager.GetComponent<DialogueManager>().DisplayNextSentence();
+        NextSceneScript();
+        nextSentenceTime = 0f;
+       
     }
+
+   
+    
 
 }

@@ -236,6 +236,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &371951338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371951339}
+  m_Layer: 8
+  m_Name: PlantParticle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &371951339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371951338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.184, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2042070804}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &391689347
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +587,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1059041255}
+  - {fileID: 1346444507}
   m_Father: {fileID: 282008524}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -973,7 +1004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663007898}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.26, y: -0.3, z: 0}
+  m_LocalPosition: {x: 1.019, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1083,7 +1114,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8, y: -10, z: 8, w: 1.5e-44}
+  m_BoundingSphereOverride: {x: 1.602e-42, y: 5.9e-44, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1308,7 +1339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753845920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -0.3, z: 0}
+  m_LocalPosition: {x: -1.407, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1354,7 +1385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780023594}
   - component: {fileID: 780023593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,6 +1455,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &832361279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832361280}
+  m_Layer: 8
+  m_Name: DragonPointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &832361280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832361279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.314, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1129923782}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921873754
 GameObject:
@@ -1799,7 +1860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1011261498
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2129,6 +2190,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 926695801}
+  - {fileID: 832361280}
   m_Father: {fileID: 282008524}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -2462,6 +2524,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257345250}
   m_CullTransparentMesh: 0
+--- !u!1 &1346444506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346444507}
+  m_Layer: 8
+  m_Name: HorsePointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1346444507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346444506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.305, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 581848799}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373285886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,37 +2788,44 @@ MonoBehaviour:
   dialogue:
     sentences:
     - "Ol\xE1!"
-    - "Meu nome \xE9 Diego, voc\xEA conhece os Elementais?"
-    - "Eles s\xE3o criaturas poderosas, hoje vou lhe mostrar tr\xEAs Elementais!"
-    - Este se chama Tocha!, do elemento fogo.
+    - Estou aqui para te ensinar sobre os elementais!
+    - "Eles s\xE3o criaturas poderosas. Hoje vou lhe mostrar tr\xEAs Elementais."
+    - Este se chama Tocha, do elemento fogo.
     - "O nome deste \xE9 Marinho, do elemento \xE1gua!"
     - "E esta \xE9 chamada Carn\xEDvora!, do elemento planta."
-    - "Todos elementais s\xE3o poderosos! por\xE9m..."
-    - Certos tipos de elementais "ganham" de outros tipos, e "perdem" para outros
-      certos tipos.
-    - "Por exemplo, Tocha \xE9 mais forte que Carn\xEDvora."
-    - "Por\xE9m..."
-    - "Marinho \xE9 mais forte que tocha!"
+    - "Todos elementais s\xE3o poderosos! Por\xE9m..."
+    - Certos tipos de elementais "ganham" de um tipo, e "perdem" para outro tipo.
+    - "Por exemplo, Tocha \xE9 mais forte que Carn\xEDvora do elemento planta."
+    - No entanto...
+    - "Tocha \xE9 mais fraco que Marinho do elemento \xE1gua."
     - Para entender por que isso acontece vamos ver os elementos!
-    - "Cada elemental corresponde a um elemento: Planta, \xC1gua e Fogo."
-    - "Uma pergunta. Se voc\xEA quiser apagar uma chama, que elemento voc\xEA usaria?"
-    - "Isso! Jogando \xE1gua em uma chama, ela vai se apagar!"
-    - "Por essa raz\xE3o Marinho do elemento \xE1gua consegue derrotar Tocha do elemento
-      fogo."
-    - Mas e o elemento planta?
-    - Qual elemento as plantas precisam para sobreviver?
+    - "Cada elemental corresponde \xE0 um elemento "
+    - Tocha corresponde ao elemento fogo.
+    - "Marinho corresponde ao elemento \xE1gua"
+    - "E Carn\xEDvora corresponde ao elemento planta."
+    - "Mas por que alguns elementos s\xE3o mais forte que outros?"
+    - Para entender como isso acontece, posso fazer algumas perguntas?
+    - "Por exemplo, qual \xE9 o elemento que as plantas precisam para sobreviver?"
     - "Isso! Plantas absorvem \xE1gua!"
-    - "Logo, C\xE1rnivora \xE9 forte contra Marinho."
-    - E que tipo de elemento pode destruir plantas?
+    - "Por isso Carn\xEDvora do elemento planta derrota Marinho do elemento \xE1gua."
+    - "Segunda pergunta, que tipo de elemento pode destru\xEDr plantas?"
     - Isso, chamas queimam plantas.
-    - Por isso Tocha consegue derrotar planta.
-    - "Ser\xE1 que agora voc\xEA consegue adivinhar qual \xE9 o elemental ganhador?"
+    - "Por isso Tocha consegue derrotar Carn\xEDvora."
+    - Mas qual elemento consegue apagar o fogo?
+    - "Exatamente!, a \xE1gua apaga o fogo."
+    - "Logo Marinho \xE9 mais forte que Tocha."
+    - "Dessa forma os elementos b\xE1sicos se relacionam."
+    - "Ser\xE1 que agora voc\xEA consegue adivinhar qual \xE9 o elemental ganhador
+      em cada batalha?"
     - "Marinho contra Carn\xEDvora, quem \xE9 o vencedor?"
-    - "E Tocha contra Carn\xEDvora?"
-    - E agora? Tocha contra Marinho?
-    - "Ok! S\xF3 para ter certeza, Carn\xEDvora contra Tocha?"
+    - "Sim! As plantas conseguem absorver a \xE1gua."
+    - "E agora? Tocha contra Carn\xEDvora?"
+    - "Exatamente, plantas n\xE3o s\xE3o resistentes ao fogo."
+    - Tocha contra Marinho?
+    - "Certo, \xE1gua apaga fogo. Logo Marinho \xE9 o vencedor."
+    - "Ok s\xF3 para ter certeza, Carn\xEDvora contra Marinho?"
+    - Muito bem!
     - "Parab\xE9ns! Agora voc\xEA j\xE1 conhece os b\xE1sicos sobre os elementais."
-    - 
     name: NAME
   fade: {fileID: 1644293012}
   manager: {fileID: 1455712635}
@@ -2769,8 +2868,9 @@ MonoBehaviour:
   waterParticle: {fileID: 5401300028938575641, guid: 2714e3135cbe24d4383995291a85c436,
     type: 3}
   waterParticlePosition: {fileID: 1059041255}
-  plantParticle: {fileID: 0}
-  plantParticlePosition: {fileID: 0}
+  plantParticle: {fileID: 2233389633882480058, guid: 311b9e1b327231d4a9a85715d20d2365,
+    type: 3}
+  plantParticlePosition: {fileID: 371951339}
   dragonPoint: {fileID: 1497138469}
   horsePoint: {fileID: 627442077}
   plantPoint: {fileID: 1373285886}
@@ -2791,6 +2891,9 @@ MonoBehaviour:
   secondButtonText: {fileID: 921873756}
   opponent1: {fileID: 753845921}
   opponent2: {fileID: 663007899}
+  dragonPointer: {fileID: 832361280}
+  horsePointer: {fileID: 1346444507}
+  plantPointer: {fileID: 2023020842}
   nextSentenceTime: 0
   sentenceRate: 0.7
   rightAnswer: 0
@@ -2829,6 +2932,36 @@ Transform:
   m_Father: {fileID: 485104021}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2023020841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2023020842}
+  m_Layer: 8
+  m_Name: PlantPointer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2023020842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023020841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.05, y: 0.262, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2042070804}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042070803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,7 +2991,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: -0.567, z: -4.0524845}
   m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2023020842}
+  - {fileID: 371951339}
   m_Father: {fileID: 282008524}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -9,6 +9,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public GameObject battleSystem;
+     
 
     private void Awake()
     {

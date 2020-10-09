@@ -10,10 +10,9 @@ public class DialogueManager : MonoBehaviour
     public Queue<string> sentences;
     private float timer;
     public bool primeiroCorreto;
-    public Tarefa01 tarefa01;
     public string sentence;
-    public float nextSentenceTime = 0f;
-    public float sentenceRate;
+
+
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -25,18 +24,15 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
     public void DisplayNextSentence()
-    {  
-        if (Time.time >= nextSentenceTime)
-        {
+    {     
             sentence = sentences.Dequeue();
             DialogueText.text = sentence;
-            nextSentenceTime = Time.time + 1f / sentenceRate;
             if (sentences.Count == 0)
             {
                 EndDialogue();
                 return;
             }         
-        }
+        
     }
    void EndDialogue()
     {

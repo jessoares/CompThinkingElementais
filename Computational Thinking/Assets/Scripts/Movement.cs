@@ -49,9 +49,7 @@ public class Movement : MonoBehaviour
             case State.Attack:
                 Attack();
                 break;
-            case State.Death:
-                Death();
-                break;
+          
 
         }
     }
@@ -79,21 +77,13 @@ public class Movement : MonoBehaviour
     {
         float slideSpeed = 1f;
         transform.position += (attackPoint.position - this.transform.position) * slideSpeed * Time.deltaTime;
-        if (Vector3.Distance(transform.position,attackPoint.position) < 0.7f)
+        if (Vector3.Distance(transform.position,attackPoint.position) < 0.4f)
         {
             state = State.Idle;
         }
     }
 
-    void Death()
-    {
-        paraboleCounter += Time.deltaTime;
-        paraboleCounter = paraboleCounter % 5f;
-        transform.position = MathParabola.Parabola(Vector3.zero, Vector3.forward * 10f, 5f, paraboleCounter / 5f);
-
-
-
-    }
+  
  
 
 }
