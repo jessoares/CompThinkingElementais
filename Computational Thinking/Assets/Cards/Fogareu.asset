@@ -16,6 +16,6 @@ MonoBehaviour:
   unitName: Fogareu
   damage: 3
   attackName: Incendiario
-  currentHP: 4
+  currentHP: 11111
   maxHP: 10
   attack: {fileID: 6155592571669210713, guid: 3611175f614246f44a05cba85cf526f7, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: -3005858147526513425, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
   unitName: Marinho
-  damage: 2
+  damage: 1111
   attackName: Jato de Agua
   currentHP: 9
   maxHP: 9

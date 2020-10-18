@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: -6287384416022553831, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
   unitName: Carnivora
-  damage: 3
+  damage: 11111
   attackName: Mordida Venenosa
   currentHP: 3
   maxHP: 3

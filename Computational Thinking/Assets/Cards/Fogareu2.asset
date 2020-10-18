@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 7035640827511919432, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
   unitName: Fogareu
-  damage: 2
+  damage: 111111
   attackName: Incendiario
   currentHP: 12
   maxHP: 12

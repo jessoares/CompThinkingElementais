@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Tarefa02 : MonoBehaviour
 {
     public GameObject horse;
@@ -31,12 +32,20 @@ public class Tarefa02 : MonoBehaviour
     public float sentenceRate;
     public int rightAnswer;
     public string sentence;
-    public GameObject place1;
-    public GameObject place2;
-    public GameObject conditions;
+    public GameObject card1;
+    public GameObject card2;
     public bool isQuestion;
-    public GameObject winner;
-    public GameObject loser;
+    public GameObject dragGame;
+    public Image image1;
+    public Image image2;
+    public Sprite dragonSprite;
+    public Sprite horseSprite;
+    public Sprite plantSprite;
+    public GameObject placeCard1;
+    public GameObject placeCard2;
+    public GameObject checkButton;
+    public int placed = 0;
+
 
 
     public void Start()
@@ -44,6 +53,7 @@ public class Tarefa02 : MonoBehaviour
         nextSentenceTime = Time.time + 1f / sentenceRate;
         isQuestion = false;
         count = 38;
+       
     }
     public void Update()
     {
@@ -59,33 +69,58 @@ public class Tarefa02 : MonoBehaviour
         nextSentenceTime = Time.time + 1f / sentenceRate;
         nextButton.SetActive(false);
         count--;
-           
-            if (count == 15)
-            {
-                place1.SetActive(true);
-                place2.SetActive(true);
-                conditions.SetActive(true);
 
-            }
-        if (count == 25)
+        if (count == 19)
         {
-
-            loser.SetActive(true);
-
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
+            thirdButton.SetActive(false);
+            image1.sprite = horseSprite;
+            image2.sprite = dragonSprite;
+            card1.GetComponent<Winner>().vencedor = true;
+            card2.GetComponent<Winner>().vencedor = false;
+            card1.GetComponent<RectTransform>().anchoredPosition = placeCard1.GetComponent<RectTransform>().anchoredPosition;
+            card2.GetComponent<RectTransform>().anchoredPosition = placeCard2.GetComponent<RectTransform>().anchoredPosition;
 
         }
+        if (count == 19)
+        {
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
+            thirdButton.SetActive(false);
+            image1.sprite = horseSprite;
+            image2.sprite = plantSprite;
+            card1.GetComponent<Winner>().vencedor = false;
+            card2.GetComponent<Winner>().vencedor = true;
+            card1.GetComponent<RectTransform>().anchoredPosition = placeCard1.GetComponent<RectTransform>().anchoredPosition;
+            card2.GetComponent<RectTransform>().anchoredPosition = placeCard2.GetComponent<RectTransform>().anchoredPosition;
 
-
-        if (count == 24)
+        }
+        if (count == 20)
+        {
+            firstButton.SetActive(false);
+            secondButton.SetActive(false);
+            thirdButton.SetActive(false);
+            image1.sprite = dragonSprite;
+            image2.sprite = plantSprite;
+            card1.GetComponent<Winner>().vencedor = true;
+            card2.GetComponent<Winner>().vencedor = false;
+            card1.GetComponent<RectTransform>().anchoredPosition = placeCard1.GetComponent<RectTransform>().anchoredPosition;
+              card2.GetComponent<RectTransform>().anchoredPosition = placeCard2.GetComponent<RectTransform>().anchoredPosition;
+        }
+        if (count == 21)
             {
-                dragon.SetActive(false);
-                sentenceRate = 0.7f;
-                plant.SetActive(true);
-            plant.transform.position = opponent2.transform.position;
-            dragon.transform.position = opponent1.transform.position;
-            winner.SetActive(true);
-
-
+            isQuestion = true;
+            card1.SetActive(true);
+            card2.SetActive(true);
+            sentenceRate = 0.7f;
+            dragon.SetActive(false);
+            dragGame.SetActive(true);
+            image1.sprite = dragonSprite;
+            image2.sprite = horseSprite;
+            checkButton.SetActive(true);
+            card1.GetComponent<Winner>().vencedor = false;
+            card2.GetComponent<Winner>().vencedor = true;
         }
 
             if (count == 25)
@@ -202,11 +237,19 @@ public IEnumerator Wait2Dialogue()
     firstButton.SetActive(true);
     secondButton.SetActive(true);
     thirdButton.SetActive(true);
-        manager.GetComponent<DialogueManager>().DialogueText.text = sentence;
+     manager.GetComponent<DialogueManager>().DialogueText.text = sentence;
    
 
 }
-public void buttonOne()
+    public IEnumerator Wait2DialogueDrag()
+    {
+        yield return new WaitForSeconds(3f);
+
+        manager.GetComponent<DialogueManager>().DialogueText.text = sentence;
+
+
+    }
+    public void buttonOne()
 {
     if (rightAnswer == 1)
     {
@@ -282,5 +325,37 @@ public void buttonTwo()
     nextSentenceTime = 0f;
 
 }
+    public IEnumerator WaitDialogueDrag()
+    {
+        yield return new WaitForSeconds(3f);
+        manager.GetComponent<DialogueManager>().DisplayNextSentence();
+        NextSceneScript();
+        nextSentenceTime = 0f;
+
+    }
+    public void checkRight()
+    {
+        if (placed < 1)
+        {
+            sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
+            manager.GetComponent<DialogueManager>().DialogueText.text = "Você precisa escolher um vencedor e um perdedor!";
+            StartCoroutine(Wait2DialogueDrag());
+        }
+        else
+        {
+            if (card1.GetComponent<Winner>().correto == true && card2.GetComponent<Winner>().correto == true)
+            {
+                manager.GetComponent<DialogueManager>().DialogueText.text = "Correto!";
+                StartCoroutine(WaitDialogueDrag());
+
+            }
+            else
+            {
+                sentence = manager.GetComponent<DialogueManager>().DialogueText.text;
+                manager.GetComponent<DialogueManager>().DialogueText.text = "Hm, acho que você errou por pouco, vamos tentar de novo?";
+                StartCoroutine(Wait2DialogueDrag());
+            }
+        }
+    }
 
 }

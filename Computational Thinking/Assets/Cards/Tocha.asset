@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: -6615675202023742229, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
   unitName: Tocha
-  damage: 3
+  damage: 11111
   attackName: Bola de fogo
-  currentHP: 1
+  currentHP: 8
   maxHP: 8
   attack: {fileID: 6155592571669210713, guid: 3611175f614246f44a05cba85cf526f7, type: 3}

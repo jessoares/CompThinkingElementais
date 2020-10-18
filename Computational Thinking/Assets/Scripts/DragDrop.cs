@@ -9,6 +9,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public GameObject battleSystem;
+    public GameObject tarefa;
      
 
     private void Awake()
@@ -19,10 +20,22 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
-        if (eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace == true)
+        if (eventData.pointerDrag.gameObject.GetComponent<CardDisplay>() != null)
         {
-            battleSystem.GetComponent<BattleSystem>().playerGO = null;
-            eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace = false;
+            if (eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace == true)
+            {
+                battleSystem.GetComponent<BattleSystem>().playerGO = null;
+                eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace = false;
+            }
+        }
+        else
+        {
+            tarefa.GetComponent<Tarefa02>().placed--;
+            if (tarefa.GetComponent<Tarefa02>().placed <= 0)
+            {
+                tarefa.GetComponent<Tarefa02>().placed = 0;
+            }
+                
         }
     }
     public void OnEndDrag(PointerEventData eventData)

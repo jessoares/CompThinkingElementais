@@ -7,14 +7,4 @@ public class Winner : MonoBehaviour
     public bool vencedor;
     public bool correto;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
