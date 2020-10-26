@@ -24,7 +24,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
             if (eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace == true)
             {
-                battleSystem.GetComponent<BattleSystem>().playerGO = null;
+                battleSystem.GetComponent<BattleSystemFinal>().playerGO = null;
                 eventData.pointerDrag.gameObject.GetComponent<CardDisplay>().inPlace = false;
             }
         }

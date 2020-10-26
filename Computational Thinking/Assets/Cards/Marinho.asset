@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93159ad9850f19b43a92953f639c73d7, type: 3}
   m_Name: Marinho
   m_EditorClassIdentifier: 
-  image: {fileID: -3005858147526513425, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
+  image: {fileID: 4452907163883118241, guid: 98e35c71a6fbe0d4b866fa1114b7f8e2, type: 3}
   unitName: Marinho
-  damage: 11111
-  attackName: Jato de Agua
+  damage: 1
   currentHP: 8
   maxHP: 8
   attack: {fileID: 5401300028938575641, guid: 2714e3135cbe24d4383995291a85c436, type: 3}
+  fraquezas:
+  - Planta
+  - Eletrico
+  forte:
+  - Fogo
+  - Pedra
+  empate:
+  - Agua
+  tipo: Agua

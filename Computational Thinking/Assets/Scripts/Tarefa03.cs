@@ -145,7 +145,7 @@ public class Tarefa03 : MonoBehaviour
         }
         if (count == 15)
         {
-            ElementalAttackDamage();
+            //ElementalAttackDamage();
             isQuestion = false;
             input.SetActive(false);
         }
@@ -214,34 +214,36 @@ public class Tarefa03 : MonoBehaviour
     public IEnumerator ElementalAttack()
     {
         yield return new WaitForSeconds(1f);
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        // bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         Instantiate(playerUnit.attack, attackPoint.position, Quaternion.identity);
         enemyHUD.SetHP(enemyUnit.currentHP);
-        if (isDead)
-        {
-            card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DeathCoroutine(1.5f));
-            enemyHUD.SetHP(0);
-        }
-        else
-        {
-            card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DamageCoroutine(0f, 5, 0.5f));
+        /* if (isDead)
+         {
+             card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DeathCoroutine(1.5f));
+             enemyHUD.SetHP(0);
+         }
+         else
+         {
+             card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DamageCoroutine(0f, 5, 0.5f));
 
-        }
-    }
-    public void ElementalAttackDamage()
-    {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-        enemyHUD.SetHP(enemyUnit.currentHP);
-        if (isDead)
-        {
-            card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DeathCoroutine(1.5f));
-            enemyHUD.SetHP(0);
-        }
-        else
-        {
-            card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DamageCoroutine(0f, 5, 0.5f));
+         }
+     }
+     public void ElementalAttackDamage()
+     {
+        // bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+         enemyHUD.SetHP(enemyUnit.currentHP);
+         if (isDead)
+         {
+             card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DeathCoroutine(1.5f));
+             enemyHUD.SetHP(0);
+         }
+         else
+         {
+             card2.GetComponent<CardDamage>().StartCoroutine(card2.GetComponent<CardDamage>().DamageCoroutine(0f, 5, 0.5f));
 
-        }
+         }
+     }
+     */
     }
     public IEnumerator ElementalAttack2()
     {

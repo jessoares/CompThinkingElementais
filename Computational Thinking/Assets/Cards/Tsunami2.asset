@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93159ad9850f19b43a92953f639c73d7, type: 3}
   m_Name: Tsunami2
   m_EditorClassIdentifier: 
-  image: {fileID: -1408848047273551750, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
+  image: {fileID: 3007329921534742141, guid: 98e35c71a6fbe0d4b866fa1114b7f8e2, type: 3}
   unitName: Tsunami
-  damage: 11111
-  attackName: Maremoto
-  currentHP: 5
-  maxHP: 5
+  damage: 2
+  currentHP: 20
+  maxHP: 20
   attack: {fileID: 5401300028938575641, guid: 2714e3135cbe24d4383995291a85c436, type: 3}
+  fraquezas:
+  - Planta
+  - Eletrico
+  forte:
+  - Fogo
+  - Pedra
+  empate:
+  - Agua
+  tipo: Agua

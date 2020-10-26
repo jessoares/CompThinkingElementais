@@ -12,6 +12,8 @@ public class BattleSystem : MonoBehaviour
 
     Card playerUnit;
     Card enemyUnit;
+    EnemyStats enemyStats;
+    PlayerStats playerStats;
 
     public Text dialogueText;
 
@@ -88,7 +90,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack()
     {
         input.SetActive(false);
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        bool isDead = enemyStats.TakeDamage(playerUnit.damage);
         Instantiate(playerUnit.attack, attackPoint.position, Quaternion.identity);
         yield return new WaitForSeconds(1f);
         if (isDead)
@@ -127,7 +129,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        bool isDead = playerStats.TakeDamage(enemyUnit.damage);
 
         Instantiate(enemyUnit.attack, attackPoint.position, Quaternion.identity);
 

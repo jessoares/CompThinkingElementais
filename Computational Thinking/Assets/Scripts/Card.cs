@@ -8,10 +8,13 @@ public class Card : ScriptableObject
     public Sprite image;
     public string unitName;
     public int damage;
-    public string attackName;
     public int currentHP;
     public int maxHP;
     public ParticleSystem attack;
+    public string[] fraquezas;
+    public string[] forte;
+    public string[] empate;
+    public string tipo;
 
 
     public void Start()
@@ -25,20 +28,7 @@ public class Card : ScriptableObject
         currentHP = maxHP;
     }
 
-    public bool TakeDamage(int dmg)
-    {
-        currentHP -= dmg;
-
-        if (currentHP <= 0)
-        {
-            currentHP = maxHP;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+  
 
 
 

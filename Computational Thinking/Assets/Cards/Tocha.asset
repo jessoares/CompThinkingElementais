@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93159ad9850f19b43a92953f639c73d7, type: 3}
   m_Name: Tocha
   m_EditorClassIdentifier: 
-  image: {fileID: -6615675202023742229, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
+  image: {fileID: 4788135893764869437, guid: 98e35c71a6fbe0d4b866fa1114b7f8e2, type: 3}
   unitName: Tocha
-  damage: 11111
-  attackName: Bola de fogo
+  damage: 1
   currentHP: 8
   maxHP: 8
   attack: {fileID: 6155592571669210713, guid: 3611175f614246f44a05cba85cf526f7, type: 3}
+  fraquezas:
+  - Agua
+  - Pedra
+  forte:
+  - Planta
+  empate:
+  - Fogo
+  - Eletrico
+  tipo: Fogo

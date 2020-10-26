@@ -26,6 +26,10 @@ public class CardDamage : MonoBehaviour
         this.gameObject.SetActive(false);
         mySprite.color = normalColor;
     }
+    public void Ressurect()
+    {
+        this.gameObject.SetActive(true);
+    }
     public IEnumerator DamageCoroutine(int nmbr,float duration)
     {
 

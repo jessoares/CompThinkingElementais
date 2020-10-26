@@ -12,10 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93159ad9850f19b43a92953f639c73d7, type: 3}
   m_Name: Figueira
   m_EditorClassIdentifier: 
-  image: {fileID: -1209903221105704126, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
+  image: {fileID: 7224283320202081860, guid: 98e35c71a6fbe0d4b866fa1114b7f8e2, type: 3}
   unitName: Figueira
-  damage: 11111
-  attackName: Enraizamento
-  currentHP: 10
-  maxHP: 10
+  damage: 2
+  currentHP: 35
+  maxHP: 35
   attack: {fileID: 2233389633882480058, guid: 311b9e1b327231d4a9a85715d20d2365, type: 3}
+  fraquezas:
+  - Fogo
+  forte:
+  - Agua
+  - Pedra
+  empate:
+  - Planta
+  - Eletrico
+  tipo: Planta

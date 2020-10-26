@@ -677,6 +677,10 @@ MonoBehaviour:
   currentHealth: {fileID: 1181815344}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &97630453
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -896,6 +900,10 @@ MonoBehaviour:
   currentHealth: {fileID: 1468983417}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &187521743
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1754,6 +1762,10 @@ MonoBehaviour:
   currentHealth: {fileID: 1671578959}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!114 &304072848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2002,11 +2014,11 @@ MonoBehaviour:
   playerGO: {fileID: 0}
   index: 5
   enemyCards:
-  - {fileID: 11400000, guid: 176eb93eedabe6b45b28b696167d1ccc, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 4bf18863fe300ef4baecde3a9ff1f818, type: 2}
   - {fileID: 11400000, guid: 38de0ebeafa1c3e47bae8c826228b9ef, type: 2}
   - {fileID: 11400000, guid: c796e91ac9f96aa4d95c2881655baae8, type: 2}
-  - {fileID: 11400000, guid: 9b9f6444823d10e40b045c1992844963, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 96e2c1e23f574a449b8d346f2c37b090, type: 2}
   playerCards: []
   enemyBattleStation: {fileID: 1555568541}
@@ -2557,7 +2569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e362b628741049b058589185e42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 176eb93eedabe6b45b28b696167d1ccc, type: 2}
+  card: {fileID: 0}
   image: {fileID: 2006650923}
   novoName: {fileID: 909416302}
   damage: {fileID: 2011884701}
@@ -2565,6 +2577,10 @@ MonoBehaviour:
   currentHealth: {fileID: 1546591791}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &581123564
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3346,7 +3362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e362b628741049b058589185e42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 9b9f6444823d10e40b045c1992844963, type: 2}
+  card: {fileID: 0}
   image: {fileID: 192965540}
   novoName: {fileID: 2062229782}
   damage: {fileID: 600840287}
@@ -3354,6 +3370,10 @@ MonoBehaviour:
   currentHealth: {fileID: 614938986}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &668065442
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3503,7 +3523,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.928e-42, y: 5.9e-44, z: 0, w: NaN}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.0679515e-25}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3576,7 +3596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e362b628741049b058589185e42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 84720eb969c91794ca3dd66c0cdf2fe9, type: 2}
+  card: {fileID: 0}
   image: {fileID: 218318799}
   novoName: {fileID: 1216788090}
   damage: {fileID: 1544525306}
@@ -3584,6 +3604,10 @@ MonoBehaviour:
   currentHealth: {fileID: 2047178552}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &711039416
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4182,7 +4206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e362b628741049b058589185e42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 726813a0f403c254bbbcbcbad4f3ca78, type: 2}
+  card: {fileID: 0}
   image: {fileID: 1951870516}
   novoName: {fileID: 834539045}
   damage: {fileID: 1526088046}
@@ -4190,6 +4214,10 @@ MonoBehaviour:
   currentHealth: {fileID: 1886979882}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &851417012
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5065,7 +5093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e362b628741049b058589185e42d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 114251f802522e34c8ac01e3433a5d97, type: 2}
+  card: {fileID: 0}
   image: {fileID: 262132408}
   novoName: {fileID: 296828269}
   damage: {fileID: 1583301326}
@@ -5073,6 +5101,10 @@ MonoBehaviour:
   currentHealth: {fileID: 21708219}
   attack: {fileID: 0}
   inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!225 &1079478986
 CanvasGroup:
   m_ObjectHideFlags: 0

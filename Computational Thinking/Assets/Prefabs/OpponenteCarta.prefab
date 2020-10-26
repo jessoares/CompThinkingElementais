@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9182432823125711910}
   - component: {fileID: 8239812332087289758}
   - component: {fileID: 134999342349578281}
+  - component: {fileID: 5698223390544820592}
   m_Layer: 5
   m_Name: OpponenteCarta
   m_TagString: Untagged
@@ -36,7 +37,6 @@ RectTransform:
   - {fileID: 4514157615302207845}
   - {fileID: 8258848311851525595}
   - {fileID: 4032913967127493161}
-  - {fileID: 4350354863442799615}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,6 +76,11 @@ MonoBehaviour:
   attackName: {fileID: 3941961132453169455}
   currentHealth: {fileID: 7220748987357984623}
   attack: {fileID: 0}
+  inPlace: 0
+  weakness: []
+  strength: []
+  draw: []
+  type: 
 --- !u!114 &134999342349578281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +99,20 @@ MonoBehaviour:
   flashDuration: 0.2
   numberOffFlashes: 7
   mySprite: {fileID: 8087476853817861224}
+--- !u!114 &5698223390544820592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155032848269214472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef08cf5da38b564688b9ff927fa4e64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 0}
+  currentHealth: 0
 --- !u!1 &3635958052563506612
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.9, y: -23.697}
+  m_AnchoredPosition: {x: -0.1, y: -15.2}
   m_SizeDelta: {x: 14.9, y: 8.255}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4537676628940790724
@@ -172,39 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
---- !u!1 &3739383278941746179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4350354863442799615}
-  m_Layer: 0
-  m_Name: AttackPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4350354863442799615
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3739383278941746179}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -80, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 229306852564239473}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Text: 12
 --- !u!1 &3993917894690676619
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,9 +270,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 22
 --- !u!1 &4780642067572635285
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,9 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: TOCHA
 --- !u!1 &6262163670450942200
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +494,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 4788135893764869437, guid: 98e35c71a6fbe0d4b866fa1114b7f8e2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -555,7 +539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.2, y: -23.7}
+  m_AnchoredPosition: {x: -22.2, y: -15.6}
   m_SizeDelta: {x: 54.78, y: 8.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1288921547630856598
@@ -599,6 +583,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-'
+  m_Text: 'DANO:'

@@ -23,7 +23,7 @@ public class PlayerCard : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             if (battleSystem != null)
             {
-                battleSystem.GetComponent<BattleSystem>().playerGO = eventData.pointerDrag.gameObject;
+                battleSystem.GetComponent<BattleSystemFinal>().playerGO = eventData.pointerDrag.gameObject;
             }
             else
             {
