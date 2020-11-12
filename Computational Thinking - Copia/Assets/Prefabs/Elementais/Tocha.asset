@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ce70fb3c3610748966b1c23674b6bb, type: 3}
+  m_Name: Tocha
+  m_EditorClassIdentifier: 
+  image: {fileID: -2485096872071357665, guid: 3dad1df5b7230254aa4c144be79c537f, type: 3}
+  unitName: Tocha
+  attack: {fileID: 3613060716729523640, guid: d3a93b52ef726a04c9e2672ba7d914e3, type: 3}
+  fraquezas: Agua
+  forte: Planta
+  tipo: Fogo

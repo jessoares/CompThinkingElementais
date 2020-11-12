@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93159ad9850f19b43a92953f639c73d7, type: 3}
+  m_Name: Rochoso
+  m_EditorClassIdentifier: 
+  image: {fileID: -2939854119440149165, guid: 98e35c71a6fbe0d4b866fa1114b7f8e2, type: 3}
+  unitName: Rochoso
+  damage: 1
+  currentHP: 5
+  maxHP: 5
+  attack: {fileID: 5145358823715661862, guid: 84925e2317d02cc40b2486a981078402, type: 3}
+  fraquezas:
+  - Agua
+  - Planta
+  forte:
+  - Fogo
+  - Eletrico
+  empate:
+  - Pedra
+  tipo: Pedra
